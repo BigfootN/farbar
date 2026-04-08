@@ -34,6 +34,6 @@ jobs:
       - name: Check typescript
         run: |
           npm install typescript
-          npm tsc -b
+          tsc -b
       - name: Build deb package
         run: npm tauri build -b deb
