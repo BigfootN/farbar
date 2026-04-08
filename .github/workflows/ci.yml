@@ -36,4 +36,4 @@ jobs:
           npm install typescript
           tsc -b
       - name: Build deb package
-        run: npm tauri build -b deb
+        run: npm run tauri build -- -b deb
