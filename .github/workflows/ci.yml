@@ -27,6 +27,8 @@ jobs:
       - name: Install webkit2gtk
         run: sudo apt-get install libwebkit2gtk-4.1-dev
       - uses: actions/setup-node@v6
+      - name: Install pnpm
+        run: npm install -g pnpm@latest-10
       - name: Typescript check
         run: pnpm tsc -b
       - name: Build deb package
