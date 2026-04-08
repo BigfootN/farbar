@@ -29,7 +29,9 @@ jobs:
       - uses: actions/setup-node@v6
       - name: Install pnpm
         run: npm install -g pnpm@latest-10
-      - name: Typescript check
-        run: pnpm tsc -b
+      - name: Install npm packages
+        run: npm install
+      - name: Check typescript
+        run: npm tsc -b
       - name: Build deb package
-        run: pnpm tauri build -b deb
+        run: npm tauri build -b deb
