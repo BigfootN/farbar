@@ -1,7 +1,7 @@
 on:
   push:
 jobs:
-  build_rust:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -26,5 +26,7 @@ jobs:
         run: sudo apt-get install libjavascriptcoregtk-4.1-dev
       - name: Install webkit2gtk
         run: sudo apt-get install libwebkit2gtk-4.1-dev
-      - name: Build rust
-        run: cargo build
+      - name: Typescript check
+        run: pnpm tsc -b
+      - name: Build deb package
+        run: pnpm tauri build -b deb
