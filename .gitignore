@@ -7,3 +7,4 @@ node_modules
 vite.config.d.ts
 vite.config.js
 pnpm-lock.yaml
+.idea
