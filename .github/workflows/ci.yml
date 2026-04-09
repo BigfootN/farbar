@@ -35,5 +35,7 @@ jobs:
         run: |
           npm install typescript
           tsc -b
+      - name: Rust clippy
+        run: cargo clippy
       - name: Build deb package
         run: npm run tauri build -- -b deb
